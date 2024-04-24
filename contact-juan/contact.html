@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <header>
+        <img src="images/logo.webp" alt="FREE Food Resources Logo" class="logo">
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#OurMission">Our Mission</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="form">
+                <div class="contact-info">
+                    <h3 class="title" >Let's get in touch</h3>
+    
+                    <p class="text">
+                        Thank you for reaching out! Whether you're interested in volunteering, 
+                        have questions about next events, or just want to say hello, we're here to help. 
+                        Please fill out the this form, and we'll get back to you as soon as possible. 
+                        Together, we can make a difference in the fight against hunger!
+                    </p>
+    
+                    <div class="info">
+                        <div class="information">
+                            <img src="images/person.png" class="icon" alt=".">
+                            <p>Maria Andreina Torrealba</p>
+                        </div>
+                        <div class="information">
+                            <img src="images/person.png" class="icon" alt=".">
+                            <p>Ryan Moye</p>
+                        </div>
+                        <div class="information">
+                            <img src="images/person.png" class="icon" alt=".">
+                            <p>Vyncent Harris</p>
+                        </div>
+                        <div class="information">
+                            <img src="images/person.png" class="icon" alt=".">
+                            <p>Juan Casilla</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="contact-form">
+    
+                    <form action="contact.html" autocomplete="off" id="form">
+                        <div id="error">
+                        <h3 class="title">Contact us</h3>
+                        <div class="input-container">
+                          <input type="text" name="name" class="input"/>
+                          <label for=".">First Name</label>
+                          <span>First Name</span>
+                          <small>First Name is REQUIRED</small>
+                        </div>
+                        <div class="input-container">
+                            <input type="text" name="name" class="input"/>
+                            <label for=".">Last Name</label>
+                            <span>Last Name</span>
+                            <small>Last Name is REQUIRED</small>
+                          </div>
+                        <div class="input-container">
+                          <input type="email" name="email" class="input"/>
+                          <label for=".">Email</label>
+                          <span>Email</span>
+                          <small>Email is REQUIRED</small>
+                        </div>
+                        <div class="input-container">
+                          <input type="tel" name="phone" class="input"/>
+                          <label for=".">Phone</label>
+                          <span>Phone</span>
+                          <small>Phone is REQUIRED</small>
+                        </div>
+                        <div class="input-container textarea">
+                          <textarea name="message" class="input"></textarea>
+                          <label for=".">Message</label>
+                          <span>Message</span>
+                        </div>
+                        <button type="submit" value="Send" class="btn">Send</button>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="images/facebook.webp" alt="Facebook" class="socialmed-icon">
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="images/instagram.webp" alt="Instagram" class="socialmed-icon">
+        </a>
+        <a href="https://www.twitter.com" target="_blank">
+            <img src="images/twitter.webp" alt="Twitter" class="socialmed-icon">
+        </a>
+        <a href="https://www.linkedin.com" target="_blank">
+            <img src="images/linkedin.webp" alt="LinkedIn" class="socialmed-icon">
+        </a>
+    </footer>
+
+    <script src="contact.js"></script>
+</body>
+</html>
