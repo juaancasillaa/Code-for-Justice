@@ -1,0 +1,339 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Nunito sans', Arial, sans-serif;
+    background-color: #EEEDEB;
+}
+
+h2,h3 {
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.logo {
+    max-width: 150px;
+}
+.icon {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 35px;
+  height: 4px;
+  background-color: #bca48c;
+  margin: 6px 15px;
+}
+
+/* Desktop Navigation */
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#myLinks {
+  display: flex;
+}
+
+#myLinks li {
+  margin-left: 20px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #495043;
+
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+  .icon {
+      display: block;
+  }
+
+  #myLinks {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 150px; /* Adjust as needed */
+      right: 0;
+      background-color: #EEEDEB; /* Adjust as needed */
+      width: 100%;
+  }
+
+  #myLinks li {
+      margin: 10px 0;
+  }
+  #myLinks a :hover{
+    background-color: rgba(188, 164, 140, 0.5);
+
+  }
+
+}
+
+/* image-background */
+.image-background {
+    background: url(images/pexels-rdne-stock-project-6646768.jpg) top center no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    height: 700px;
+    transition: 0.5s ease;
+}
+
+.image-background h1 {
+    color: white;
+    font-size: 40px;
+    position: relative;
+    top: 580px;
+    left: 50px;
+    transition: 0.5s ease;
+}
+/* animation for the header */
+h1 {
+    animation: fadeInLeft; 
+    animation-duration: 1s; 
+}
+/* what we do */
+.about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mission {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+;}
+.about-us-p {
+    width: 55vmin;
+    color: #666f5f;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #bca48c;
+    margin-top: 40px;
+    font-size: 17px;
+}
+
+.about-us h2 {
+    margin-top: 15px;
+    color: #666f5f;
+    font-size: 40px;
+}
+
+.what-we-do,
+.what-we-do-middle {
+    display: flex;
+    margin-top: 30px;
+}
+
+.event-image-container {
+    height: 600px;
+    padding: 5px 60px;
+}
+
+.event {
+    max-width: 100%;
+    height: 80%;
+    object-fit: cover;
+    animation: fadeInLeft; 
+    animation-duration: 4s; 
+}
+
+.whatWeDo-description {
+    width: 70vmin;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    top: -70px;
+}
+
+.event-title {
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    color: #666f5f;
+    border-bottom: 3px solid #bca48c; 
+}
+
+.event-paragraph {
+    color: #666f5f;
+    font-size: 22px;
+}
+
+.what-we-do-middle {
+    margin-left: 50px;
+}
+
+/* our staff css */
+
+#title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+#title h2 {
+    color: #666f5f;
+    font-size: 40px;
+}
+
+/* card slider css*/
+.list {
+    display: flex;
+    padding: 10px;
+    list-style: none;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    animation: fadeInLeft;
+    animation-duration: 5s; 
+  }
+
+
+  
+  .item {
+    width:100%;
+    padding: 0 60px;
+    scroll-snap-align: center;
+  }
+  
+  .content {
+    background-color: #9DA993;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 400px;
+}
+
+  .content img {
+    max-width: 100%;
+    object-fit: cover;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .profile-details{
+    margin-top: 20px;
+    margin-left: 100px;
+  }
+
+
+  .name, .job {
+    color: white;
+    width: 50vmin;
+  }
+
+  .job {
+    font-size: 18px;
+  }
+
+  .name {
+    font-size: 28px;
+
+  }
+  /* Hide scrollbar in webkit */
+  .list::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  .list-wrapper {
+    position: relative;
+  }
+  
+  .button {
+    object-fit: cover;
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    }
+  
+  .button--previous {
+    left: 1.5rem;
+  
+  }
+  
+  .button--next {
+    right: 1.5rem;
+  }
+/* footer css */
+footer {
+    padding: 1em 0;
+    background-color: transparent;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+footer .socialmed-icon {
+    width: 30px;
+    margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+    .nav-menu li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .nav-menu a {
+        font-size: 18px;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar {
+        text-align: center;
+    }
+
+    .image-background h1 {
+        top: 600px;
+        left: 20px;
+        font-size: 20px;
+    }
+    .swiper-navBtn {
+        display: none;
+      }
+      
+      .what-we-do {
+          display: flex;
+          flex-direction: column; 
+          align-items: center; 
+          margin-top: 30px;
+      }
+  
+      .event-image-container,
+      .whatWeDo-description {
+          width: 100%;
+          padding: 0; 
+          text-align: center; 
+          margin-bottom: 20px; 
+      }
+  
+      .what-we-do-middle {
+          margin-left: 0; 
+          display: flex;
+          flex-direction: column-reverse; 
+          align-items: center;
+          margin-top: 30px;
+      }
+}
+
