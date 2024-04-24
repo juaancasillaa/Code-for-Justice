@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+   <title>F.R.E.E</title>
+</head>
+<body>
+    <header>
+      <nav class="topnav" id="myTopnav">
+        <a href="#home" class="active">
+            <img src="images/FreeFood.png" alt="FREE Food Resources Logo" class="logo">
+        </a>
+        <!-- Hamburger Icon -->
+        <div class="icon" onclick="toggleMenu()">
+            <!-- Hamburger bars -->
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <!-- Navigation links -->
+        <ul id="myLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">Events</a></li>
+            <li><a href="#about">Mission</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    </header>
+    <main>
+        <section class="image-background">
+            <h1>Fulfilling Hunger, Nourishing Hope<br> FREE Food. Resources. for Everyone. Everywhere</h1>
+        </section>
+        <section class="about-us">
+            <div class="about-container">
+                <div class="mission">
+                    <p class="about-us-p">At F.R.E.E, we believe that no one should have to go hungry. We are a non-profit organization based in Charlotte, dedicated to addressing the critical issues of hunger and food insecurity in our community. </p>
+                    <h2>What we do</h2>
+                </div>
+            <div class="what-we-do">
+                <div class="event-image-container">
+                    <img src="images/food-donation.webp" alt="photo of food donation" class="event">
+                </div>
+                <div class="whatWeDo-description">
+                    <h3 class="event-title">Food bank</h3>
+                    <p class="event-paragraph">Every weekend, we open our doors to distribute non-perishable food items to those facing food insecurity. We believe that access to nutritious food is a fundamental human right.</p>
+                </div>      
+            </div>
+            <div class="what-we-do-middle">
+                <div class="whatWeDo-description">
+                    <h3 class="event-title">Grocery Partnerships</h3>
+                    <p class="event-paragraph">We collaborate with local grocers to issue food gift cards, providing individuals and families with the means to purchase essential groceries.</p>
+                </div>      
+                <div class="event-image-container">
+                    <img src="images/photo-1628717341663-0007b0ee2597.avif" alt="photo of food donation" class="event">
+                </div>
+            </div>
+            <div class="what-we-do">
+                <div class="event-image-container">
+                    <img src="images/photo-1609139027234-57570f43f692.avif" alt="photo of food donation" class="event">
+                </div>
+                <div class="whatWeDo-description">
+                    <h3 class="event-title">Support for the Homeless</h3>
+                    <p class="event-paragraph">We work closely with various organizations and sponsors to support the homeless population by delivering food directly to those in need on the streets.</p>
+                </div>      
+            </div>
+            </div>
+        </section>
+        <div id="title">
+            <h2>Meet our Staff</h2>
+        </div>
+        <div class="list-wrapper">
+            <ul class="list">
+              <li class="item">
+                <div class="content">
+                  <img src="images/Maria-Nina-Torrealba-Headshot.jpg" alt="staff-picture">
+                  <div class="profile-details">
+                        <h3 class="name">Nina Torrealba</h3>
+                        <p class="job">Coding Apprentice</p>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="content">
+                  <img src="images/Juan-Casilla-Headshot.jpg" alt="staff-picture">
+                  <div class="profile-details">
+                        <h3 class="name">Juan Casilla</h3>
+                        <p class="job">Coding Apprentice</p>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="content">
+                  <img src="images/Ryan-Moye-Headshot-copy.jpg" alt="staff-picture">
+                  <div class="profile-details">
+                        <h3 class="name">Ryan Moye</h3>
+                        <p class="job">Coding Apprentice</p>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="content">
+                  <img src="images/Vyncent-Harris-Headshot.JPG" alt="staff-picture">
+                  <div class="profile-details">
+                      <h3 class="name">Vyncent Harris</h3>
+                      <p class="job">Coding Apprentice</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <!-- We're calling `handleClick` with a direction argument when the buttons are clicked -->
+            <button onclick="handleClick('previous')" class="button button--previous" type="button">
+                <i class="fa-solid fa-circle-chevron-left fa-2xl" style="color: #9da993;"></i>
+            </button>
+            <button onclick="handleClick('next')" class="button button--next" type="button">
+                <i class="fa-solid fa-circle-chevron-right fa-2xl" style="color: #9da993;"></i>
+            </button>
+            </div>
+    </main>
+    <footer>
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="images/facebook_copy.png" alt="Facebook" class="socialmed-icon">
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="images/instagram_copy.png" alt="Instagram" class="socialmed-icon">
+        </a>
+        <a href="https://www.twitter.com" target="_blank">
+            <img src="images/twitter_copy.png" alt="Twitter" class="socialmed-icon">
+        </a>
+        <a href="https://www.linkedin.com" target="_blank">
+            <img src="images/linkedin_copy.png" alt="LinkedIn" class="socialmed-icon">
+        </a>
+    </footer>
+    <script src="about.js"></script>
+    <script src="https://kit.fontawesome.com/255a2a7703.js" crossorigin="anonymous"></script>
+</body>
+</html>
