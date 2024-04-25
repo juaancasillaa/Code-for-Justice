@@ -17,66 +17,72 @@ h2,h3 {
     font-weight: 400;
     font-style: normal;
 }
-.logo {
-    max-width: 150px;
-}
-.icon {
-  display: none;
-  cursor: pointer;
+
+
+nav {
+  background-color: #EEEDEB;
+  
 }
 
-.bar {
-  width: 35px;
-  height: 4px;
-  background-color: #bca48c;
-  margin: 6px 15px;
+nav ul {
+width: 100%;
+list-style: none;
+display: flex;
+justify-content: flex-end;
+align-items: center;
 }
 
-/* Desktop Navigation */
-.topnav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-#myLinks {
-  display: flex;
+nav li {
+  height: 50px;
+
 }
 
-#myLinks li {
-  margin-left: 20px;
-  list-style: none;
-}
-
-a {
+nav a {
+  height: 100%;
+  padding: 0 30px;
   text-decoration: none;
-  color: #495043;
-
+  display: flex;
+  align-items: center;  
+  color: #42483d;
+  font-weight: bold;
 }
 
-/* Media Query for Small Screens */
-@media (max-width: 768px) {
-  .icon {
-      display: block;
-  }
+nav a:hover{
+ color: black;
+}
 
-  #myLinks {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 150px; /* Adjust as needed */
-      right: 0;
-      background-color: #EEEDEB; /* Adjust as needed */
-      width: 100%;
-  }
+nav a:first-child{
+   margin-right: auto;
+}
+.logo {
+  max-width: 220px;
 
-  #myLinks li {
-      margin: 10px 0;
-  }
-  #myLinks a :hover{
-    background-color: rgba(188, 164, 140, 0.5);
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: #EEEDEB;
+  box-shadow:  -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
 
-  }
-
+.sidebar li {
+  width: 100%;
+}
+.hamburger {
+  height: 40px;
+  width: 40px;
+  margin-right: 15px;
+}
+.menu {
+  display: none;
 }
 
 /* image-background */
@@ -84,7 +90,7 @@ a {
     background: url(images/pexels-rdne-stock-project-6646768.jpg) top center no-repeat;
     background-size: cover;
     max-width: 100%;
-    height: 700px;
+    height: 900px;
     transition: 0.5s ease;
 }
 
@@ -92,7 +98,7 @@ a {
     color: white;
     font-size: 40px;
     position: relative;
-    top: 580px;
+    top: 780px;
     left: 50px;
     transition: 0.5s ease;
 }
@@ -110,11 +116,11 @@ h1 {
 .mission {
     display: flex;
     flex-direction: column;
-    align-items: center
-;}
+    align-items: center;
+  }
 .about-us-p {
     width: 55vmin;
-    color: #666f5f;
+    color: #42483d;
     padding-bottom: 20px;
     border-bottom: 3px solid #bca48c;
     margin-top: 40px;
@@ -165,7 +171,7 @@ h1 {
 }
 
 .event-paragraph {
-    color: #666f5f;
+    color: #42483d;
     font-size: 22px;
 }
 
@@ -194,7 +200,7 @@ h1 {
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
     animation: fadeInLeft;
-    animation-duration: 5s; 
+    animation-duration: 8s; 
   }
 
 
@@ -206,7 +212,7 @@ h1 {
   }
   
   .content {
-    background-color: #9DA993;
+    background-color: #42483d;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -225,7 +231,8 @@ h1 {
 
   .profile-details{
     margin-top: 20px;
-    margin-left: 100px;
+    margin-left: 200px;
+    padding-bottom: 10px;
   }
 
 
@@ -252,7 +259,10 @@ h1 {
     position: relative;
   }
   
-  .button {
+
+  
+  #button--previous {
+    left: 1.5rem;
     object-fit: cover;
     background: transparent;
     border: none;
@@ -260,15 +270,17 @@ h1 {
     top: 50%;
     cursor: pointer;
     }
-  
-  .button--previous {
-    left: 1.5rem;
-  
-  }
-  
-  .button--next {
+
+  #button--next {
     right: 1.5rem;
-  }
+    object-fit: cover;
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    }
+
 /* footer css */
 footer {
     padding: 1em 0;
@@ -335,5 +347,17 @@ footer .socialmed-icon {
           align-items: center;
           margin-top: 30px;
       }
+      .hideOnMobile {
+         display: none;
+      }
+      .menu {
+        display: block;
+      }
+      .profile-details{
+        margin-top: 20px;
+        margin-left: 50px;
+        padding-bottom: 10px;
+      }
+      
 }
 
