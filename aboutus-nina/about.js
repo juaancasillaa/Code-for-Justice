@@ -10,11 +10,12 @@ direction === "previous" ?     list.scrollBy({ left: -itemWidth, behavior: "smoo
 
 }
 
-function toggleMenu() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-      x.style.display = "none";
-  } else {
-      x.style.display = "block";
-  }
+function showSidebar(){
+  const sidebar = document.querySelector('.sidebar')
+  sidebar.style.display = 'flex';
+}
+
+function hideSidebar(){
+  const sidebar = document.querySelector('.sidebar')
+  sidebar.style.display = 'none';
 }

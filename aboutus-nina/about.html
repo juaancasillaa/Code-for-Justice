@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About page- what we do- meet our staff">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
@@ -11,27 +13,30 @@
    <title>F.R.E.E</title>
 </head>
 <body>
+    class="hideOnMobile"
     <header>
-      <nav class="topnav" id="myTopnav">
-        <a href="#home" class="active">
-            <img src="images/FreeFood.png" alt="FREE Food Resources Logo" class="logo">
-        </a>
-        <!-- Hamburger Icon -->
-        <div class="icon" onclick="toggleMenu()">
-            <!-- Hamburger bars -->
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <!-- Navigation links -->
-        <ul id="myLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#news">Events</a></li>
-            <li><a href="#about">Mission</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <ul class="sidebar">
+                <li onclick="hideSidebar()"><a><img src="images/close.png" alt="close" class="hamburger"></a></li>
+                <li><a href="http://127.0.0.1:5500/home-vyn/index.html#OurMission">Home</a></li>
+                <li><a href="http://127.0.0.1:5500/ourmission/ourmission.html">Mission</a></li>
+                <li><a href="http://127.0.0.1:5500/events-moye/event.html">Events</a></li>
+                <li><a href="http://127.0.0.1:5500/aboutus-nina/about.html">About</a></li>
+                <li><a href="http://127.0.0.1:5500/contact-juan/contact.html">Contact Us</a></li>
+            </ul>
+            <ul class>
+                <a href="http://127.0.0.1:5500/home-vyn/index.html#OurMission" class="active">
+                    <img src="images/foodlogo.png" alt="FREE Food Resources Logo" class="logo">
+                </a>
+                <li class="hideOnMobile"><a href="http://127.0.0.1:5500/home-vyn/index.html#OurMission">Home</a></li>
+                <li  class="hideOnMobile"><a href="http://127.0.0.1:5500/ourmission/ourmission.html">Mission</a></li>
+                <li  class="hideOnMobile"><a href="http://127.0.0.1:5500/events-moye/event.html">Events</a></li>
+                <li  class="hideOnMobile"><a href="http://127.0.0.1:5500/aboutus-nina/about.html">About</a></li>
+                <li  class="hideOnMobile"><a href="http://127.0.0.1:5500/contact-juan/contact.html">Contact Us</a></li>
+                <li class="menu" onclick="showSidebar()"><a href="#"><img src="images/hamburger.png" alt="hamburger-menu" class="hamburger"></a></li>
+            </ul>
+
+        </nav>
     </header>
     <main>
         <section class="image-background">
@@ -45,7 +50,7 @@
                 </div>
             <div class="what-we-do">
                 <div class="event-image-container">
-                    <img src="images/food-donation.webp" alt="photo of food donation" class="event">
+                    <img src="images/food-donation.jpeg" alt="photo of food donation" class="event">
                 </div>
                 <div class="whatWeDo-description">
                     <h3 class="event-title">Food bank</h3>
@@ -58,12 +63,12 @@
                     <p class="event-paragraph">We collaborate with local grocers to issue food gift cards, providing individuals and families with the means to purchase essential groceries.</p>
                 </div>      
                 <div class="event-image-container">
-                    <img src="images/photo-1628717341663-0007b0ee2597.avif" alt="photo of food donation" class="event">
+                    <img src="images/photo-1628717341663-0007b0ee2597.jpeg" alt="photo of food donation" class="event">
                 </div>
             </div>
             <div class="what-we-do">
                 <div class="event-image-container">
-                    <img src="images/photo-1609139027234-57570f43f692.avif" alt="photo of food donation" class="event">
+                    <img src="images/photo-1609139027234-57570f43f692.jpeg" alt="photo of food donation" class="event">
                 </div>
                 <div class="whatWeDo-description">
                     <h3 class="event-title">Support for the Homeless</h3>
@@ -115,26 +120,26 @@
               </li>
             </ul>
             <!-- We're calling `handleClick` with a direction argument when the buttons are clicked -->
-            <button onclick="handleClick('previous')" class="button button--previous" type="button">
+            <button onclick="handleClick('previous')" id="button--previous" type="button" alt="image of nina">
                 <i class="fa-solid fa-circle-chevron-left fa-2xl" style="color: #9da993;"></i>
             </button>
-            <button onclick="handleClick('next')" class="button button--next" type="button">
+            <button onclick="handleClick('next')" id="button--next" type="button" alt="image of nina">
                 <i class="fa-solid fa-circle-chevron-right fa-2xl" style="color: #9da993;"></i>
             </button>
             </div>
     </main>
     <footer>
         <a href="https://www.facebook.com" target="_blank">
-            <img src="images/facebook_copy.png" alt="Facebook" class="socialmed-icon">
+            <img src="images/facebook.webp" alt="Facebook" class="socialmed-icon">
         </a>
         <a href="https://www.instagram.com" target="_blank">
             <img src="images/instagram_copy.png" alt="Instagram" class="socialmed-icon">
         </a>
         <a href="https://www.twitter.com" target="_blank">
-            <img src="images/twitter_copy.png" alt="Twitter" class="socialmed-icon">
+            <img src="images/twitter.webp" alt="Twitter" class="socialmed-icon">
         </a>
         <a href="https://www.linkedin.com" target="_blank">
-            <img src="images/linkedin_copy.png" alt="LinkedIn" class="socialmed-icon">
+            <img src="images/linkedin.webp" alt="LinkedIn" class="socialmed-icon">
         </a>
     </footer>
     <script src="about.js"></script>
