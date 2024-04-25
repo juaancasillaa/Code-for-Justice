@@ -18,7 +18,7 @@ h2,h3 {
     font-style: normal;
 }
 
-
+/* nav bar */
 nav {
   background-color: #EEEDEB;
   
@@ -56,7 +56,7 @@ nav a:first-child{
 }
 .logo {
   max-width: 220px;
-
+/* hamburger menu */
 }
 .sidebar {
   position: fixed;
@@ -249,11 +249,6 @@ h1 {
     font-size: 28px;
 
   }
-  /* Hide scrollbar in webkit */
-  .list::-webkit-scrollbar {
-    display: none;
-  }
-
 
   .list-wrapper {
     position: relative;
