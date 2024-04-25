@@ -4,6 +4,7 @@
 }
 
 body {
+    font-family: 'Nunito sans', Arial, sans-serif;
     background-color: #EEEDEB;
 }
     /* Header */
@@ -40,12 +41,12 @@ header {
 
 .nav-menu a {
     text-decoration: none;
-    color: #333;
+    color: #666F5F;
     font-weight: bold;
 }
 
 .nav-menu a:hover {
-    color: #9DA993;
+    color: black;
 }
 
 .title {
@@ -55,7 +56,7 @@ header {
     font-family: "Bungee", sans-serif;
 }
 
-.grid {
+.flex {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -133,6 +134,11 @@ footer .socialmed-icon {
 
     .navbar {
         text-align: center;
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: column;
     }
 }
     
