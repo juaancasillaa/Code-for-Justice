@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #EEEDEB;
+}
+    /* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(26, 26, 26, 0.25);
+    /* Horizontal shadow (0) Where shadow goes. Vertical (2px) this creates an elevation effect. Blur (4px) this creates a blur (no rigidness) color (.25 opacity (see through) */
+}
+
+.logo {
+    max-width: 220px;
+    /* Size is medium */
+}
+
+/* Navigation bar */
+.navbar {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-menu li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-menu a:hover {
+    color: #9DA993;
+}
+
+.title {
+    text-align: center;
+    padding: 60px;
+    font-size: 60px;
+    font-family: "Bungee", sans-serif;
+}
+
+.grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 90px;
+}
+
+.eachsquare {
+    width: 18rem;
+    height: 20rem;
+    padding: 2rem;
+    background-color: #9DA993;
+    border-radius: 0.625rem;
+    margin: 0.625rem;
+    box-shadow: 0 0 0.313rem rgba(0, 0, 0, 0.2);
+  }
+
+.paragraph {
+    font-size: 15px;
+    font-family: 'Nunito sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.text {
+    font-size: 12px;
+    font-family: 'Nunito sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.nolose {
+    font-size: 30px;
+    font-family: "Bungee", sans-serif;
+    text-align: center;
+}
+
+.picture {
+    width: 160px;
+    height: 155px;
+    margin-left: 60px;
+    position: relative;
+}
+    
+/* Footer */
+footer {
+    padding: 1em 0;
+    background-color: #FFFFFF;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+footer .socialmed-icon {
+    width: 35px;
+    margin: 0 10px;
+}
+
+    /* Responsive design */
+@media (max-width: 768px) {
+
+    /* Phones and smaller tablets */
+    .nav-menu li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .nav-menu a {
+        font-size: 18px;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar {
+        text-align: center;
+    }
+}
+    
+    @media (min-width: 1024px) {
+    .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    }
+
+    p {
+    color: black;
+    
+    font-size: 35px;
+    }
+    .flexbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* has to be used for columns instead of justify content! */
+    flex-direction: column;
+    }
+    
+    .flexbox-item {
+    align-content: stretch;
+    width: 1000px;
+    margin: 10px;
+    border: 3px solid black;
+    background: #86bcfa;
+    }
+    
+    .flexbox-item1 {
+    contain: content;
+    padding: 20px;
+    min-height: 450px;
+    }
+    
+    .flexbox-item2 {
+    contain: content;
+    padding: 20px;
+    min-height: 500px;
+    }
+}
