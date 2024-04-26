@@ -31,53 +31,24 @@ header {
     max-width: 220px;
 }
 
-/*SIDEBAR and Hamburger Menu*/
-.menu {
+/* Hamburger Menu Styles */
+.hamburger-menu {
     display: none;
+    /* Hidden by default */
+    background: none;
+    border: none;
     cursor: pointer;
-    z-index: 1001;
-    position: absolute;
-    right: 20px;
-    top: 15px;
 }
 
-.hamburger {
-    display: block;
-    width: 40px;
-    height: 40px;
-    background: url('images/hamburger.png') no-repeat center center;
-    background-size: cover;
-}
-
-.sidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 250px;
-    height: 100vh;
-    background-color: #EEEDEB;
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    display: none;
-    flex-direction: column;
-    z-index: 1000;
-    padding: 0;
-    list-style-type: none;
-}
-
-.sidebar li {
-    width: 100%;
-    padding: 10px 20px;
-    border-bottom: 1px solid #ccc;
-}
-
-.sidebar.show {
-    display: flex;
+.hamburger-menu img {
+    width: 30px;
+    /* Adjust size as needed */
 }
 
 /* Navigation bar */
 .navbar {
-    flex-grow: 1;
     text-align: right;
+    flex-direction: column;
 }
 
 .nav-menu {
@@ -137,6 +108,7 @@ main {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .gallery-indicators {
@@ -188,84 +160,110 @@ footer .socialmed-icon {
     margin: 0 10px;
 }
 
-/* Responsive design */
+/* Responsive design for Mobile */
 @media (max-width: 768px) {
-    .menu {
+    .hamburger-menu {
         display: block;
-    }
-
-    .nav-menu,
-    .nav-menu li {
-        display: none;
+        /* Display the hamburger menu */
     }
 
     .navbar {
+        display: none;
+        /* Initially hide the navbar */
+        display: block;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+
         text-align: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    header {
+        display: flex;
+        /* Flex display for inline elements */
+        flex-direction: row;
+        /* Horizontal row alignment */
+        justify-content: space-between;
+        /* Logo on left, menu on right */
+        align-items: center;
+        /* Center items vertically */
+        padding: 10px 20px;
+        /* Padding for spacing */
+    }
+
+    .logo {
+        flex-grow: 1;
+        /* Logo occupies available space */
+        max-width: 100px;
+        /* Maximum logo width */
+    }
+
+    .nav-menu {
+        display: flex;
+        /* Enables flexbox properties */
+        flex-direction: column;
+        /* Stack items vertically */
+        text-align: center;
+        /* Center items horizontally */
+        width: 100%;
+        /* Full width of its container */
+    }
+
+    .nav-menu li {
+        width: 100%;
+        /* Full width list items */
+        margin: 10px 0;
+        /* Margin between items */
+    }
+
+    .nav-menu a {
+        font-size: 18px;
+        /* Font size of links */
+        display: block;
+        /* Block display for full width usage */
+        text-align: center;
+        /* Center text within links */
+        width: 100%;
+        /* Full width links */
     }
 
     main {
         flex-direction: column;
+        /* Column layout for main content */
     }
 
     .content,
     .gallery {
         width: 100%;
-    }
-
-    .photo {
-        height: 195px;
-    }
-
-    .gallery-indicators {
-        bottom: 5px;
-    }
-
-    .dot {
-        margin-bottom: 170px;
+        /* Full width for responsive layout */
     }
 }
 
+/* For desktop and tablets devices */
 @media (min-width: 769px) {
     .gallery {
         height: auto;
+        /* Auto-adjusting height */
         aspect-ratio: 4 / 3;
+        /* Aspect ratio for visual aesthetics */
     }
 
     .photo {
         height: auto;
+        /* Auto-adjusting height */
     }
+}
 
-    .photo img {
-        object-fit: contain;
-        max-height: 600px;
-    }
-
-    @media (min-width: 1025px) {
-        .photo img {
-            max-height: 450px;
-            max-width: 70%;
-            object-fit: contain;
-            margin: auto;
-        }
-
-        .gallery {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .gallery-indicators {
-            bottom: 10px;
-        }
-
-        .dot {
-            height: 20px;
-            width: 20px;
-            margin: 0 8px;
-            margin-bottom: 425px;
-        }
-
-        .footer {
-            margin-bottom: 550px;
-        }
+/* For desktop screens */
+@media (min-width: 1025px) {
+    .gallery {
+        max-width: 1200px;
+        /* Maximum width of the gallery */
+        margin: 0 auto;
+        /* Centering the gallery */
     }
 }
