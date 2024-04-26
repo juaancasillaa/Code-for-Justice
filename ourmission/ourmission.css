@@ -17,37 +17,72 @@ header {
     box-shadow: 0 2px 4px rgba(26, 26, 26, 0.25);
     /* Horizontal shadow (0) Where shadow goes. Vertical (2px) this creates an elevation effect. Blur (4px) this creates a blur (no rigidness) color (.25 opacity (see through) */
 }
-
-.logo {
-    max-width: 220px;
-    /* Size is medium */
-}
-
-/* Navigation bar */
-.navbar {
-    flex-grow: 1;
-    text-align: right;
-}
-
-.nav-menu {
-    list-style: none;
-    padding: 0;
-}
-
-.nav-menu li {
-    display: inline-block;
-    margin-left: 20px;
-}
-
-.nav-menu a {
+/* nav bar */
+nav {
+    background-color: #EEEDEB;
+    
+  }
+  
+  nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  }
+  
+  nav li {
+    height: 50px;
+  
+  }
+  
+  nav a {
+    height: 100%;
+    padding: 0 30px;
     text-decoration: none;
-    color: #666F5F;
+    display: flex;
+    align-items: center;  
+    color: #42483d;
     font-weight: bold;
-}
-
-.nav-menu a:hover {
-    color: black;
-}
+  }
+  
+  nav a:hover{
+   color: black;
+  }
+  
+  nav a:first-child{
+     margin-right: auto;
+  }
+  .logo {
+    max-width: 220px;
+  /* hamburger menu */
+  }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #EEEDEB;
+    box-shadow:  -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  .sidebar li {
+    width: 100%;
+  }
+  .hamburger {
+    height: 40px;
+    width: 40px;
+    margin-right: 15px;
+  }
+  .menu {
+    display: none;
+  }
 
 .title {
     text-align: center;
@@ -115,26 +150,37 @@ footer .socialmed-icon {
 }
 
     /* Responsive design */
-@media (max-width: 768px) {
+    @media (max-width: 768px) {
+ 
+        .nav-menu li {
+            display: block;
+            margin: 10px 0;
+        }
+    
+        .nav-menu a {
+            font-size: 18px;
+        }
+    
+        header {
+            flex-direction: column;
+            text-align: center;
+        }
+    
+        .navbar {
+            text-align: center;
+        }
 
-    /* Phones and smaller tablets */
-    .nav-menu li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .nav-menu a {
-        font-size: 18px;
-    }
-
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .navbar {
-        text-align: center;
-    }
+        .swiper-navBtn {
+            display: none;
+          }
+    
+          .hideOnMobile {
+            display: none;
+         }
+         
+         .menu {
+           display: block;
+         }
 
     .flex {
         display: flex;
@@ -143,9 +189,6 @@ footer .socialmed-icon {
 }
     
     @media (min-width: 1024px) {
-    .gallery {
-    grid-template-columns: repeat(4, 1fr);
-    }
 
     p {
     color: black;
