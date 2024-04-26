@@ -11,23 +11,11 @@
 <body>
     <header>
         <img src="Images/FreeFood (2).png" alt="FREE Food Resources Logo" class="logo">
-        <!-- Hamburger icon to show sidebar -->
-        <div class="menu" onclick="showSidebar()">
-            <img src="images/hamburgr.png" alt="Menu" class="hamburger">
-        </div>
-        <nav>
-            <!-- Sidebar, hidden by default, shown when hamburger is clicked -->
-            <ul class="sidebar">
-                <li onclick="hideSidebar()"><a><img src="images/close.png" alt="close" class="hamburger"></a></li>
-                <li><a href="http://127.0.0.1:5500/home-vyn/index.html#OurMission">Home</a></li>
-                <li><a href="http://127.0.0.1:5500/ourmission/ourmission.html">Mission</a></li>
-                <li><a href="http://127.0.0.1:5500/events-moye/event.html">Events</a></li>
-                <li><a href="http://127.0.0.1:5500/aboutus-nina/about.html">About</a></li>
-                <li><a href="http://127.0.0.1:5500/contact-juan/contact.html">Contact Us</a></li>
-            </ul>
-            <!-- Standard navigation menu -->
+        <button class="hamburger-menu">
+            <img src="Images/hamburgr.png" alt="Menu">
+        </button>
+        <nav id="navbar" class="navbar">
             <ul class="nav-menu">
-                <li><a href="http://127.0.0.1:5500/home-vyn/index.html#OurMission">Home</a></li>
                 <li><a href="http://127.0.0.1:5500/ourmission/ourmission.html">Our Mission</a></li>
                 <li><a href="http://127.0.0.1:5500/events-moye/event.html">Events</a></li>
                 <li><a href="http://127.0.0.1:5500/aboutus-nina/about.html">About</a></li>
@@ -35,7 +23,6 @@
             </ul>
         </nav>
     </header>
-
 
     <main>
         <div class="content">
