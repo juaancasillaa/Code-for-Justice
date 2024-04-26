@@ -14,44 +14,72 @@
     min-height: 100vh;
   }
   
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 20px;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(26, 26, 26, 0.25);
-   /* height: 100px;*/
-  }
+  /* nav bar */
+nav {
+  background-color: #EEEDEB;
   
-  .logo {
-    width: 200px;
-  }
-  
-  .navbar {
-    flex-grow: 1;
-    text-align: right;
-  }
-  
-  .nav-menu {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .nav-menu li {
-    display: inline-block;
-    margin-left: 20px;
-  }
-  
-  .nav-menu a {
-    text-decoration: none;
-    color: #666F5F;
-    font-weight: bold;
-  }
-  
-  .nav-menu a:hover {
-    color: black;
-  }
+}
+
+nav ul {
+width: 100%;
+list-style: none;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+
+nav li {
+  height: 50px;
+
+}
+
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;  
+  color: #42483d;
+  font-weight: bold;
+}
+
+nav a:hover{
+ color: black;
+}
+
+nav a:first-child{
+   margin-right: auto;
+}
+.logo {
+  max-width: 220px;
+/* hamburger menu */
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: #EEEDEB;
+  box-shadow:  -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.sidebar li {
+  width: 100%;
+}
+.hamburger {
+  height: 40px;
+  width: 40px;
+  margin-right: 15px;
+}
+.menu {
+  display: none;
+}
   
   .container {
     position: relative;
@@ -254,23 +282,41 @@
   }
   
   @media (max-width: 768px) {
+ 
     .nav-menu li {
         display: block;
         margin: 10px 0;
     }
-  
+
     .nav-menu a {
         font-size: 18px;
     }
-  
+
     header {
         flex-direction: column;
         text-align: center;
     }
-  
+
     .navbar {
         text-align: center;
     }
+
+    .image-background h1 {
+        top: 600px;
+        left: 20px;
+        font-size: 20px;
+    }
+    .swiper-navBtn {
+        display: none;
+      }
+
+      .hideOnMobile {
+        display: none;
+     }
+     
+     .menu {
+       display: block;
+     }
   }
   
   @media (max-width: 850px) {
