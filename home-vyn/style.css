@@ -36,6 +36,32 @@ header {
     /* Size is medium */
 }
 
+/*SIDEBAR */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #EEEDEB;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.hamburger {
+    height: 40px;
+    width: 40px;
+    margin-right: 15px;
+}
+
 /* Navigation bar */
 .navbar {
     flex-grow: 1;
