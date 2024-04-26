@@ -4,9 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     text-rendering: optimizeLegibility;
-    /* Makes everything easy to see regardless of web browser */
     transition: all 0.3s ease;
-    /* Click on something will take .3 seconds to open to the next tab */
 }
 
 body {
@@ -17,7 +15,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /*Makes sure the body section is fully displayed in viewport */
 }
 
 /* Header */
@@ -28,38 +25,53 @@ header {
     padding: 16px 20px;
     background-color: #FFFFFF;
     box-shadow: 0 2px 4px rgba(26, 26, 26, 0.25);
-    /* Horizontal shadow (0) Where shadow goes. Vertical (2px) this creates an elevation effect. Blur (4px) this creates a blur (no rigidness) color (.25 opacity (see through) */
 }
 
 .logo {
     max-width: 220px;
-    /* Size is medium */
 }
 
-/*SIDEBAR */
+/*SIDEBAR and Hamburger Menu*/
+.menu {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+.hamburger {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url('images/hamburger.png') no-repeat center center;
+    background-size: cover;
+}
+
 .sidebar {
     position: fixed;
     top: 0;
     right: 0;
-    height: 100vh;
     width: 250px;
-    z-index: 999;
+    height: 100vh;
     background-color: #EEEDEB;
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     display: none;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    z-index: 1000;
+    padding: 0;
+    list-style-type: none;
 }
 
 .sidebar li {
     width: 100%;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
 }
 
-.hamburger {
-    height: 40px;
-    width: 40px;
-    margin-right: 15px;
+.sidebar.show {
+    display: flex;
 }
 
 /* Navigation bar */
@@ -93,9 +105,7 @@ main {
     display: flex;
     padding: 30px;
     align-items: flex-start;
-    /* Align items vertically at the start of the flex container */
     flex-grow: 1;
-    /* Main Element evenly grow to fill space */
 }
 
 .content {
@@ -121,15 +131,12 @@ main {
     height: 100%;
     transition: opacity 0.5s ease;
     opacity: 0;
-    /* Start with images hidden */
 }
 
 .photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Ensures image covers the entire photo div without distortion */
-    display: block;
 }
 
 .gallery-indicators {
@@ -183,20 +190,13 @@ footer .socialmed-icon {
 
 /* Responsive design */
 @media (max-width: 768px) {
-
-    /* Phones and smaller tablets */
-    .nav-menu li {
+    .menu {
         display: block;
-        margin: 10px 0;
     }
 
-    .nav-menu a {
-        font-size: 18px;
-    }
-
-    header {
-        flex-direction: column;
-        text-align: center;
+    .nav-menu,
+    .nav-menu li {
+        display: none;
     }
 
     .navbar {
@@ -214,92 +214,58 @@ footer .socialmed-icon {
 
     .photo {
         height: 195px;
-        /* Adjust for smaller screens */
     }
 
     .gallery-indicators {
         bottom: 5px;
-        /* Adjust for visibility */
     }
 
     .dot {
-        height: 15px;
-        width: 15px;
-        /* Smaller dots for smaller screens */
         margin-bottom: 170px;
     }
 }
 
 @media (min-width: 769px) {
-
-    /* For desktop and tablets devices */
     .gallery {
         height: auto;
-        /* Adjust height automatically */
         aspect-ratio: 4 / 3;
-        /* Best for photos */
     }
 
     .photo {
         height: auto;
-        /* 
-    }helps to fully display image */
-
-        .photo img {
-            object-fit: contain;
-            /* Makes whole image fits. Can scale image down without cropping/cutting it */
-            max-height: 600px;
-            /* Optional: Set a maximum height to prevent overly tall images */
-        }
     }
 
-    /* For desktop screens */
+    .photo img {
+        object-fit: contain;
+        max-height: 600px;
+    }
+
     @media (min-width: 1025px) {
         .photo img {
             max-height: 450px;
-            /* Limits the height of images */
             max-width: 70%;
-            /* Limits the width of images to prevent them from taking too much space */
             object-fit: contain;
-            /* Ensures the image fits within the given dimensions without cropping */
             margin: auto;
-            /* Centers the image within the photo div */
         }
 
         .gallery {
             max-width: 1200px;
-            /* Optional: Limits the width of the gallery */
             margin: 0 auto;
-            /* Centers the gallery within its container */
         }
 
-        /* For desktop screens */
-        @media (min-width: 1025px) {
-            .gallery-indicators {
-                position: absolute;
-                bottom: 10px;
-                /* Adjusts the position higher up from the bottom */
-                width: 100%;
-                text-align: center;
-            }
+        .gallery-indicators {
+            bottom: 10px;
+        }
 
-            .dot {
-                height: 20px;
-                /* Larger dots for better visibility */
-                width: 20px;
-                /* Larger dots for better visibility */
-                margin: 0 8px;
-                /* Adjust spacing between dots */
-                margin-bottom: 425px;
-                /* Moves dotes right on bottom of image */
-
-            }
+        .dot {
+            height: 20px;
+            width: 20px;
+            margin: 0 8px;
+            margin-bottom: 425px;
         }
 
         .footer {
             margin-bottom: 550px;
-            /* Moves dotes right on bottom of image */
-
         }
     }
 }
