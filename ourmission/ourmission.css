@@ -5,18 +5,9 @@
 
 body {
     font-family: 'Nunito sans', Arial, sans-serif;
-    background-color: #EEEDEB;
+    background-color: #fafafa;
 }
-    /* Header */
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 20px;
-    background-color: #FFFFFF;
-    box-shadow: 0 2px 4px rgba(26, 26, 26, 0.25);
-    /* Horizontal shadow (0) Where shadow goes. Vertical (2px) this creates an elevation effect. Blur (4px) this creates a blur (no rigidness) color (.25 opacity (see through) */
-}
+
 /* nav bar */
 nav {
     background-color: #EEEDEB;
@@ -61,7 +52,7 @@ nav {
     position: fixed;
     top: 0;
     right: 0;
-    height: 100vh;
+    height: 30vh;
     width: 250px;
     z-index: 999;
     background-color: #EEEDEB;
