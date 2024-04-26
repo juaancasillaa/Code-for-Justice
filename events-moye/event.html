@@ -7,17 +7,31 @@
     <title>F.R.E.E Food Resources</title>
 </head>
 <body>
-    <header>
-        <img src="images/IMG_3947.png" alt="FREE Food Resources Logo" class="logo">
-        <nav class="navbar">
-            <ul class="nav-menu">
-                <li><a href="http://127.0.0.1:5500/ourmission/ourmission.html">Our Mission</a></li>
-                <li><a href="http://127.0.0.1:5500/events-moye/event.html">Events</a></li>
-                <li><a href="http://127.0.0.1:5500/aboutus-nina/about.html">About</a></li>
-                <li><a href="http://127.0.0.1:5500/contact-juan/contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+
+  <header>
+    <nav>
+ <ul class="sidebar">
+ <li onclick="hideSidebar()"><a><img src="images/close.png" alt="close" class="hamburger"></a></li>
+  <li><a href="http://127.0.0.1:5500/home-vyn/index.html#OurMission">Home</a></li>
+ <li><a href="http://127.0.0.1:5500/ourmission/ourmission.html">Mission</a></li>
+<li><a href="http://127.0.0.1:5500/events-moye/event.html">Events</a></li>
+<li><a href="http://127.0.0.1:5500/aboutus-nina/about.html">About</a></li>
+<li><a href="http://127.0.0.1:5500/contact-juan/contact.html">Contact Us</a></li>
+</ul>
+<ul class>
+<a href="http://127.0.0.1:5500/home-vyn/index.html#OurMission" class="active">
+<img src="images/IMG_3947.png" alt="FREE Food Resources Logo" class="logo">
+</a>
+<li class="hideOnMobile"><a href="http://127.0.0.1:5500/home-vyn/index.html#OurMission">Home</a></li>
+<li  class="hideOnMobile"><a href="http://127.0.0.1:5500/ourmission/ourmission.html">Mission</a></li>
+<li  class="hideOnMobile"><a href="http://127.0.0.1:5500/events-moye/event.html">Events</a></li>
+<li  class="hideOnMobile"><a href="http://127.0.0.1:5500/aboutus-nina/about.html">About</a></li>
+<li  class="hideOnMobile"><a href="http://127.0.0.1:5500/contact-juan/contact.html">Contact Us</a></li>
+<li class="menu" onclick="showSidebar()"><a href="#"><img src="images/hamburger.png" alt="hamburger-menu" class="hamburger"></a></li>
+        </ul>
+
+    </nav>
+</header>
  <!--main header-->
  <header class="page-title">Upcoming Food Drive Events</header>
 
@@ -219,5 +233,8 @@ hunger.
         <a href="https://www.linkedin.com" target="_blank"><img src="images//linkedin.webp" alt="LinkedIn"
                 class="socialmedia"></a>
     </footer>
+
+<script src="events.js"></script>
+
 </body>
 </html>
