@@ -208,7 +208,6 @@ h1 {
   .item {
     width:100%;
     padding: 0 60px;
-    scroll-snap-align: center;
   }
   
   .content {
@@ -238,7 +237,7 @@ h1 {
 
   .name, .job {
     color: white;
-    width: 50vmin;
+    width: 55vmin;
   }
 
   .job {
@@ -312,9 +311,9 @@ footer .socialmed-icon {
     }
 
     .image-background h1 {
-        top: 600px;
+        top: 800px;
         left: 20px;
-        font-size: 20px;
+        font-size: 24px;
     }
     .swiper-navBtn {
         display: none;
@@ -353,6 +352,18 @@ footer .socialmed-icon {
         margin-left: 50px;
         padding-bottom: 10px;
       }
+      .name, .job {
+        color: white;
+        width: 55vmin;
+      }
       
 }
+
+@media(max-width: 435px){
+  .name, .job {
+    color: white;
+    width: 100vmin;
+  }
+}
+  
 
