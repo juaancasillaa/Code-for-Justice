@@ -320,10 +320,6 @@ nav a:first-child{
   }
   
   @media (max-width: 850px) {
-  
-    .container{
-      background-image: url("images/background.png");
-    }
     
     .form {
       grid-template-columns: 1fr;
@@ -354,7 +350,6 @@ nav a:first-child{
   @media (max-width: 480px) {
     .container {
       padding: 1.5rem;
-      background-image: url("images/background.png");
     }
   
     .contact-info:before {
