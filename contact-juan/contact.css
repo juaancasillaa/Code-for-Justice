@@ -157,8 +157,8 @@ nav a:first-child{
   
   .input-container label {
     position: absolute;
-    top: 30%;
-    left: 15px;
+    top: 30%; /* Initial position */
+    left: 15px; /* Initial position */
     transform: translateY(-50%);
     padding: 0 0.4rem;
     color: white;
@@ -166,7 +166,7 @@ nav a:first-child{
     font-weight: 400;
     pointer-events: none;
     z-index: 1000;
-    transition: 0.5s;
+    transition: 0.5s; /* Transition duration */
   }
   
   .input-container.textarea label {
@@ -226,10 +226,10 @@ nav a:first-child{
   }
   
   .input-container.focus label {
-    top: 0;
-    transform: translateY(-50%);
-    left: 25px;
-    font-size: 0.8rem;
+    top: 0; /* Final position when focused */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    left: 25px; /* Final position when focused */
+    font-size: 0.8rem; /* Optionally adjust font size when focused */
   }
   
   .input-container.focus span:before,
